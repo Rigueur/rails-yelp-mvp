@@ -1,0 +1,16 @@
+<nav class="navbar navbar-light bg-light border-bottom">
+  <div class="container-fluid justify-content-between">
+    <a href=<%= restaurants_path %> class="text-secondary text-decoration-none fs-5">Restaurant Index</a>
+    <a href=<%= new_restaurant_path %> class="text-black text-decoration-none">New restaurant</a>
+  </div>
+</nav>
+<div class="container">
+  <h1>New Restaurant</h1>
+  <%= simple_form_for(@restaurant) do |f| %>
+    <%= f.input :name %>
+    <%= f.input :address %>
+    <%= f.input :category %>
+    <%= f.submit %>
+  <% end %>
+  <p><%= link_to 'Back', restaurants_path, class: "btn btn-primary mt-3"%></p>
+</div>

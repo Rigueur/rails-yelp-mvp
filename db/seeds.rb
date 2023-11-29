@@ -7,3 +7,9 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+Restaurant.new(name: "Pizza Hut", address: "Lyon 2e", category: "italian").save!
+Restaurant.new(name: "Onaka", address: "Nice", category: "japanese").save!
+Restaurant.new(name: "Le bar des oiseaux", address: "Nice vieille ville", category: "french").save!
+Restaurant.new(name: "Le dragon bleu", address: "Nice massena", category: "chinese").save!
+Restaurant.new(name: "Ramen ta fraise", address: "Nice massena", category: "japanese").save!

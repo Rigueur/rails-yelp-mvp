@@ -1,0 +1,18 @@
+<nav class="navbar navbar-light bg-light border-bottom">
+  <div class="container-fluid justify-content-between">
+    <a href=<%= restaurants_path %> class="text-secondary text-decoration-none fs-5">Restaurant Index</a>
+    <a href=<%= new_restaurant_path %> class="text-black text-decoration-none">New restaurant</a>
+  </div>
+</nav>
+<div class="container pt-4">
+  <h2 class="py-2 border-bottom my-2"><%= @restaurant.name %></h2>
+  <p><%= @restaurant.address %>, <%= @restaurant.category %> <%= @restaurant.phone_number %></p>
+  <p><strong>Reviews</strong></p>
+  <ul class="list-group">
+    <% @restaurant.reviews.each do |review| %>
+      <li class="list-group-item"><%= review.content %> - <%= review.rating%>/5</li>
+    <% end %>
+  </ul>
+  <br>
+  <%= link_to 'Create review', new_restaurant_review_path(@restaurant), class: "btn btn-primary"%>
+</div>

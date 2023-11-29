@@ -1,0 +1,13 @@
+<nav class="navbar navbar-light bg-light border-bottom">
+  <div class="container-fluid justify-content-between">
+    <a href=<%= restaurants_path %> class="text-secondary text-decoration-none fs-5">Restaurant Index</a>
+    <a href=<%= new_restaurant_path %> class="text-black text-decoration-none">New restaurant</a>
+  </div>
+</nav>
+<div class="container">
+  <ul class="list-group list-group-flush mt-4">
+    <% @restaurants.each do |restaurant| %>
+      <li class="list-group-item"><%= link_to restaurant.name, restaurant_path(restaurant) %>
+    <% end %>
+  </ul>
+</div>

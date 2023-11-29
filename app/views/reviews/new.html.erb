@@ -1,0 +1,15 @@
+<nav class="navbar navbar-light bg-light border-bottom">
+  <div class="container-fluid justify-content-between">
+    <a href=<%= restaurants_path %> class="text-secondary text-decoration-none fs-5">Restaurant Index</a>
+    <a href=<%= new_restaurant_path %> class="text-black text-decoration-none">New restaurant</a>
+  </div>
+</nav>
+<div class="container">
+  <h1>New review</h1>
+  <%= simple_form_for [@restaurant, @review] do |f| %>
+    <%= f.input :content %>
+    <%= f.input :rating %>
+    <%= f.submit "Submit review", class: "btn btn-primary" %>
+  <% end %>
+  <p><%= link_to 'Back', restaurant_path(@restaurant), class: "btn btn-primary mt-3"%></p>
+</div>
